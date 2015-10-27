@@ -1,0 +1,58 @@
+PROGRAM PrgTest
+VAR_INPUT
+	xInput : BOOL;
+END_VAR
+{library private }
+VAR
+	a, c : BOOL;
+	b : STRING(80);
+	ad : ARRAY[1..2]OF DINT;
+	aptTest : POINTER TO ARRAY[0..20] OF BYTE;
+	timeOffset : DATE;
+	today: DT := dt#2015-10-26;
+END_VAR
+
+IF a = c THEN
+	b := 'test';
+ELSE
+	b := '';
+END_IF
+
+TIME();
+
+(* 
+	comments
+*)
+
+(* comments (* inside of *) comments *)
+
+BOOL_TO_BYTE();
+DWORD_TO_DT(t#20ms);
+DWORD_TO_DT();
+
+ROR(20,20);
+
+16#FF;
+16#1A;
+16#123456789abcdef;
+16#1Fg;
+2#01010111
+2#12
+2#ff
+
+dt#2015-10-26-16:17;
+t#2s3m10ms;
+
+IF NOT(a AND b OR c MOD 2) THEN
+	a := 1;
+ELSIF a XOR c THEN
+	b := FALSE;
+ELSE
+	c := -2.3;
+END_IF
+
+FOR i := 1 TO 20 DO
+	i := i - 2;
+END_FOR
+
+
